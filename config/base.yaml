@@ -1,0 +1,13 @@
+defaults:
+  flow_logs_format: "${account-id} ${action} ${az-id} ${bytes} ${dstaddr} ${dstport} ${end} ${interface-id} ${instance-id} ${flow-direction} ${packets} ${protocol} ${start} ${subnet-id} ${vpc-id} ${version} ${tcp-flags} ${srcaddr} ${srcport} ${pkt-dstaddr} ${pkt-srcaddr} ${region} ${traffic-path}"
+  frontend_subnet_count: 1
+  vpc_sensitivity: "standard"
+  vpc_count: 1
+  az_count: 2
+  az_exclusion:
+    - "euw3-az2"
+    - "use1-az3"
+    - "usw1-az2"
+    - "ape1-az1"
+    - "apne1-az3"
+    - "cac1-az3"

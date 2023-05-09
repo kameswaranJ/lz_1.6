@@ -1,0 +1,31 @@
+# © 2022 Amazon Web Services, Inc. or its affiliates. All Rights Reserved.
+# This AWS Content is provided subject to the terms of the AWS Customer Agreement available at
+# http://aws.amazon.com/agreement or other written agreement between Customer and either
+# Amazon Web Services, Inc. or Amazon Web Services EMEA SARL or both.
+#
+aws_lambda_powertools==2.7.1
+boto3==1.26.16
+botocore==1.29.16
+cognitojwt==1.4.1
+fastapi==0.89.1
+Jinja2==3.0.1
+jsonschema==4.17.3
+mangum==0.17.0
+mypy_boto3_cloudtrail==1.26.61
+mypy_boto3_ec2==1.26.63
+mypy_boto3_iam==1.26.62
+mypy_boto3_lambda==1.26.55
+mypy_boto3_organizations==1.26.17
+mypy_boto3_servicecatalog==1.26.13.post16
+mypy_boto3_sns==1.26.62
+mypy_boto3_sqs==1.26.0.post1
+mypy_boto3_stepfunctions==1.26.21
+mypy_boto3_sts==1.26.57
+mypy_boto3_support==1.26.61
+pydantic==1.10.2
+PyYAML==5.4.1
+requests==2.28.1
+setuptools==65.4.1
+starlette==0.22.0
+urllib3==1.26.13
+yorm==1.6.2

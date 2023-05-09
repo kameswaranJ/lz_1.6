@@ -1,0 +1,7 @@
+defaults:
+  dedicated_backend_cidr: "100.126.0.0/16"
+  frontend_netmask_length: 28
+  backend_netmask_length: 19
+  backend_subnet_count: 2
+  routed_backend_netmask_length: 28
+  routed_backend_subnet_count: 0

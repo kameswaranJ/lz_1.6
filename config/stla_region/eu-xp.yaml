@@ -1,0 +1,2 @@
+defaults:
+  flags: "ENABLE_PALO_ALTO_INTEGRATION"

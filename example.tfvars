@@ -1,0 +1,5 @@
+app_id      = "07224"
+env_type    = "dev"
+stla_region = "us-xf"
+shared_role = "arn:aws:iam::123456789012:role/dummy"
+app_role    = "arn:aws:iam::123456789012:role/dummy"

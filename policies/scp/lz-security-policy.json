@@ -1,0 +1,54 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "NoNetInterfaceInFirewallSubnet",
+      "Effect": "Deny",
+      "Action": [
+        "ec2:CreateNetworkInterface"
+      ],
+      "Resource": [
+        "arn:aws:ec2:*:*:subnet/*"
+      ],
+      "Condition": {
+        "StringEquals": {
+          "ec2:ResourceTag/subnet_type": "lz-reserved"
+        },
+        "ForAnyValue:StringNotLike": {
+          "aws:PrincipalArn": [
+            "arn:aws:iam::*:role/STLA-Terraform-LZ-Provisioning",
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_FCACloudEngineer_*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "ReadOnlyLZResources",
+      "Effect": "Deny",
+      "NotAction": [
+        "ec2:List*",
+        "ec2:Describe*",
+        "secretsmanager:Describe*",
+        "iam:Get*",
+        "iam:List*",
+        "ssm:Describe*",
+        "ssm:Get*",
+        "ssm:List*",
+        "logs:Describe*",
+        "logs:Get*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "aws:ResourceTag/stla_lz": "true"
+        },
+        "ForAnyValue:StringNotLike": {
+          "aws:PrincipalArn": [
+            "arn:aws:iam::*:role/STLA-Terraform-LZ-Provisioning",
+            "arn:aws:iam::*:role/aws-reserved/sso.amazonaws.com/AWSReservedSSO_FCACloudEngineer_*"
+          ]
+        }
+      }
+    }
+  ]
+}

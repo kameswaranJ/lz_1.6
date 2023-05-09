@@ -1,0 +1,4 @@
+defaults:
+  frontend_netmask_length: 24
+  backend_netmask_length: 24
+  backend_subnet_count: 2

@@ -1,0 +1,4 @@
+defaults:
+  backend_netmask_length: 27
+  backend_subnet_count: 2
+  subnet_share_alt: "auto"
